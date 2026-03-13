@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> /* aca el script es para css */
+        body{background-color: darkcyan;}
+    </style>
+</head>
+<body>
+    <script>
+        function ponertituloRojo() {
+            document.getElementById("titulo").style="color: red";
+           
+       
+        }
+
+         function ponerenazul() {
+            document.getElementById("segundo").style="color: green";
+            document.getElementById
+            
+        }
+
+        function fuerade() {    /* aca el nombre de la funcion la pusimos a la par del evento o la accion a realizar || */
+            document.getElementById("segundo").style="color: white"; /* document nos ayuda a que por el ID podemos hacer cambios en ese ID, el style llama para hacer los cambios */
+            
+        }
+    </script>
+    
+<h1 id="titulo" onmouseover="ponertituloRojo()">Bienvenido a JavaScript</h1> <!--Orden es id = al identificador para trabajarlo en css || la accion q va a realizarse es = onmouseover || el nombre con el cual vamos a llamar a la funcion para hacer q funcione -->
+<h2 id="segundo" onmouseover="ponerenazul()" onmouseleave="fuerade()">El Primer paso es el mas grande</h2>
+<p>Esta paguina es muy sencilla</p>
+<p>(Pero tiene un secreto >>> F12)</p>
+
+
+
+</body>
+</html>
+
+<!--El DOM es agarra un elemento y cambiarlo por medio de su ID document.getElementbyID-- vamos a capturar o modificar el estilo del ID titulo>
