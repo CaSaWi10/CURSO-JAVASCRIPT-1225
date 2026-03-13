@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responde Rapido</title>
+    <link rel="stylesheet" href="./style.css"> <!--agregamos el css file para estilos-->
+</head>
+
+<!--ACA ESTA EL HTML -->
+
+<body onload="comenzarCuentaRegresiva()"> <!--Evento onload hace q al entrar a la pagina empieza un contador. aca estamos llamando la funcion comenzarCuentaRegresiva q no ha sido creada todavia-->
+<h2>Responde a las preguntas lo mas rapido posible 
+<span id="cuentaRegresiva"></span></h2>
+
+<p>1. Cual es la capital de Francia?</p>
+<input type="text" id="respuesta1">  <!--para que ingrese su respuesta-->
+
+<p>2. (7*5) + 15 ?</p>
+<input type="text" id="respuesta2"> <!--para que ingrese su respuesta-->
+
+<p>3. Simbolo del Agua?</p>
+<input type="text" id="respuesta3"> <!--para que ingrese su respuesta-->
+
+<p>4. Nombre del Vocalista de "The Beatles"?</p>
+<input type="text" id="respuesta4"> <!--para que ingrese su respuesta-->
+
+<p>5. Año del descubrimiento de America </p>
+<input type="text" id="respuesta5"> <!--para que ingrese su respuesta-->
+
+<br><br>
+<button onclick="finalizado()">Termine</button> <!--Boton que llamara al a funcion finalizado-->
+<br><br>
+<button onclick="volveraintentar()">Volver a Intentar</button> <!--Boton que llamara al a funcion volver a intentar-->
+
+<audio id="audioFinal">
+    <source src="./gameover.mp3" type="audio/mpeg">
+    Sonido no habilitado
+</audio>
+
+
+<!--ACA EMPIEZA JAVASCRIPT-->
+
+<script>
+
+let tiempoTerminado   /* variable no untilizada todavia */
+let intervalodeTiempo /* variable no utilizada todavia */
+
+
+function comenzarCuentaRegresiva() {  /* esta funcion es la que hace match on onload */
+    tiempoTerminado = setTimeout(tiempoCumplido, 30000);  /* aca la variable tiempoTerminado esta tomando una funcion de nombre tiempocumplido para haga un timeout en 30 segunds */
+    intervalodeTiempo = setInterval(ticTac, 1000);  /* aca la variable IntervalodeTiempo esta funcionando cada 1 segundo */
+    document.getElementById("cuentaRegresiva").textContent = 30;  /* aca tomanos cuentaRegresiva y le agregamos el texto los 30 segundos */
+
+            }
+
+
+
+
+function ticTac() {   /*Funcion para hacer el tiempo en reversa */
+let tiempo = document.getElementById("cuentaRegresiva").textContent
+document.getElementById("cuentaRegresiva").textContent = tiempo - 1;
+
+        }
+
+
+
+function tiempoCumplido() {
+clearInterval(intervalodeTiempo);
+document.getElementById("cuentaRegresiva").textContent = 0;
+document.getElementById("audioFinal").play();
+alert("GAME OVER: Se acabo el tiempo, intenta nuevamente");
+    
+}
+
+
+
+
+
+
+
+
+function finalizado() {
+    clearInterval(tiempoTerminado);
+    clearInterval(intervalodeTiempo);
+
+    let respuesta1 = document.getElementById("respuesta1").value;
+    let respuesta2 = document.getElementById("respuesta2").value;
+    let respuesta3 = document.getElementById("respuesta3").value;
+    let respuesta4 = document.getElementById("respuesta4").value;
+    let respuesta5 = document.getElementById("respuesta5").value;
+
+    let mensaje = "1. " + respuesta1 + "\n " +
+                  "2. " + respuesta2 + "\n " +
+                  "3. " + respuesta3 + "\n " +
+                  "4. " + respuesta4 + "\n " +
+                  "5. " + respuesta5 + "\n " ;
+
+alert(mensaje);
+}
+
+</script>
+
+   
+</body>
+</html>

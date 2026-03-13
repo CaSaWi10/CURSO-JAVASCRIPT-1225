@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Tablas de Multiplicar</h1>
+    <p>Que tabla quieres recordar ?</p>
+    <input type="number" id="textoTabla" value="0">
+    <button onclick="multiplicar()">Multiplicar</button>
+
+    <ul id="listaTabla"></ul>
+
+    <script>
+
+        function multiplicar() {
+            
+        let elemetoTextoTabla = document.getElementById("textoTabla"); /* creamos variable para poder capturar el ingreso del usuario */
+        let textoNumeroTabla = elemetoTextoTabla.value;
+        let numeroTabla = Number(textoNumeroTabla);
+
+        let elementoTablaMultiplicar = document.getElementById("listaTabla");
+
+        elementoTablaMultiplicar.innerText = ""; /*aca con el innerText se queda vacia la tabla que vamos a usar */
+
+        for(let x=1; x<=10; x++){
+                let numeroResultado = numeroTabla * x;
+
+                let textoResultado = numeroTabla +" por " + x + " es igual a " + numeroResultado;
+
+                let itemLista = document.createElement("li");
+                itemLista.innerText = textoResultado;
+                elementoTablaMultiplicar.appendChild(itemLista);
+                                }
+        
+                                }
+
+    </script>
+    
+</body>
+</html>

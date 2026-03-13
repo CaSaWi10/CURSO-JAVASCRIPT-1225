@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Ingresa tu Nombre</p>
+    <input type="text" id="nombreDeUsuario">
+    <button onclick="mostrarNombre()">Ingresar</button> <!-- aca estamos usando el evento onclick q llamara una funcion -->
+    <h1 id="salida">No se tu Nombre </h1> <!--esto es un H1 que dara el mensaje al usuario-->
+
+    <script> /* JavaS */
+        function mostrarNombre() {   /* aca llamamos al onlick que se usara como funcion */
+            let elementoNombre = document.getElementById("nombreDeUsuario"); /* aca capturamos el input del usuario con el id nombre de usuario */
+            let elementoTexto = document.getElementById("salida"); /* aca capturamos el el h1 con su ID salida */ 
+            let mensaje = "Tu te llamas " + elementoNombre.value;  /* aca tomamos el mensaje tu te llamas y le sumamos el elementoNombre el cual capturamos por medio de nombredeusuario */
+            
+            elementoTexto.textContent = mensaje; /* aca tomamos elementoTexto.textContent va a ser igual a la variable mensaje que contiene "Tu te llamas " + elementoNombre.value; */
+
+        }
+    </script>
+</body>
+</html>

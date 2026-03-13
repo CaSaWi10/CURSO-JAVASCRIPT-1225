@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeout</title>
+</head>
+<body>
+    
+<input type="number" id="tiempoElejido">
+<button onclick="comenzarTiempo()">Alarma</button> 
+<h1 id="textoAlarma" style="color: red">Apagado</h1> <!--Aca estamos dando color al texto Apagado en color rojo-->
+
+<script>
+    let elementosSegundos = document.getElementById("tiempoElejido");
+    let elementoTextoAlarma = document.getElementById("textoAlarma");
+
+    function comenzarTiempo() {  /* esta funcion toma el momento donde se da click al boton y empieza el tiempo */
+        setTimeout(tiempoCumplido, 1000*elementosSegundos.value);  /* aca esta otro funcion tiempoCumplido y se multiplica port 1000 */
+        
+    }
+
+    function tiempoCumplido() {  /* esta funcion es la que llamamos arriba y la estamos configurando para que el momento que se acabe el tiempo cambie lo siguinete */
+        elementoTextoAlarma.textContent = "Encendido";
+        elementoTextoAlarma.style.color = "green";
+        
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+            
+        }
+
+        #resultado{
+            background-color: #fff3e0;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 8px;
+
+        }
+    </style>
+          
+</head>
+<body>
+    <h2>Adivina el numero 🤖</h2>
+    <p>Estoy pensando en un Numero del 1 al 10</p>
+    <button onclick="buscarNumero()">Adivinar</button>
+    
+    <div id="resultado"></div>
+
+<script>
+    let numero= Math.floor(Math.random()*10)+1;
+    console.log(numero);
+    let intento;
+   
+   function buscarNumero() {
+    let resultado = document.getElementById("resultado");
+    do{
+        intento = Number(prompt("Ingresa un numero"));
+       
+        if (numero>intento){
+            alert("muy grande, intenta con algo mas chico");
+        }else if(numero<intento){
+            alert("Muy grande! Intenta con algo mas chico");
+        }else{
+            alert("adivinaste");
+        }
+        }while(numero!==intento);
+    }
+
+</script>
+
+
+</body>
+</html>
+
+
+<!--WHile Do 
+es en este caso 
+
+do (haz)(la evaluacion de el numero q ingresa el usuarion)
+en este caso pregunta al usario un numero y comparalo con el numero random,
+para dar las diferentes alertas 
+
+ mientras el numero no sea igual a intento vuele a reperir 
+-->

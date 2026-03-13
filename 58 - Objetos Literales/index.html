@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let perro = {
+            nombre: "Bambi",
+            raza: "Chihuahua",
+            edad: 6,
+            ladrar() {
+                console.log("Guau!");
+                
+            }
+        }
+
+let perro2 = {
+    ladrar : function () {
+        console.log("Guaaauuu!!! ");
+        
+    }
+}
+
+console.log(perro.edad);
+perro.ladrar();
+perro2.ladrar();
+
+
+
+// para modificar los parametros de los objetos //
+
+perro.edad = 8;
+console.log(perro.edad);
+perro["nombre"] = "Maya";
+console.log(perro.nombre);
+
+function cumplirA(params) {
+    
+}
+
+    </script>
+    
+</body>
+</html>
