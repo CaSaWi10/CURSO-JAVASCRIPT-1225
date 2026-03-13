@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(129, 129, 129);
+            color: white;
+            padding: 10px 20px;
+
+         }
+
+         .logo{
+          color: rgb(6, 50, 194);
+          font-weight: bold;   
+         }
+
+         .nav-link{ /* barra de menu */
+            display: flex;
+            gap: 15px; /* espacio entre links */
+        }
+
+        .nav-link a{
+            color: lightblue;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: background 0.3s; /* crea una transicion de 3 segundos */
+        }
+
+        .nav-link a:hover{ /* al poner el mouse arriba cambian de color */
+            background-color: chartreuse;
+            border-radius: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="logo">⚽ Mi Logo</div>
+        <div class="nav-link"> <!--esto hace una barra de menu -->
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Acerca de </a>
+            <a href="#">Contacto</a>
+        </div>
+    </div>
+</body>
+</html>

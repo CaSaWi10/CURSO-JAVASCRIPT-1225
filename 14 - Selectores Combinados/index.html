@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores</title>
+</head>
+<style>
+    /* selector descendiente  ctrl+k+c */
+    .contenedor p{ 
+        color: green;
+    }
+
+/* selector de hijos directos */
+ol > li { 
+font-weight: bolder;
+
+}
+
+/* selector de hermanos general, todos los que estan debajo de h2 osea h3 */
+
+h2~h3 {
+    background-color: lightblue;
+
+}
+
+
+
+
+</style>
+
+<body>
+<h1>Titulo Principal</h1>
+<h3>Subtitulo Menor</h3>
+<h2>Subtitulo</h2>
+<h3>Subtitulo Menor 1</h3>
+<div class="contenedor">
+    <p>este parrafo esta dentro de un div</p>
+    <p>Este tambien</p>
+<h3>Subtitulo Menor 2</h3>
+<p>este No esta dentro del div</p>
+
+<ol>
+    <li>Primer Elemento</li>
+    <li>Segundo Elemento</li>
+        <ul>
+        <li>Elemento Interno 1</li>
+        <li>Elemento Interno 2</li>
+        </ul>
+    <li>Tercer Elemento</li>
+</ol>
+
+</div>
+
+</body>
+</html>

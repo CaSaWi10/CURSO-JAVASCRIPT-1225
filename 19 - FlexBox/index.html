@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        .contenedor{
+            display: flex;
+            justify-content: space-around; /* espacio alrededor */
+            align-items: center; /* el contenido de las cajas centrado */
+            background-color: grey;
+            height: 200px; /* altos de las cajas */
+            gap: 15px;
+                                   
+        }
+
+
+        .caja{ /* usamos .caja porque son el nombre de la class*/
+            background-color: #3498db;
+            padding: 20px; /* separa el contenido del borde */
+            font-size: 18px;
+            border-radius: 8px;
+            
+        }
+
+
+
+    </style>
+</head>
+<body>
+<!--para crear varios divs .caja{Caja $}*4-->
+<h2>Elementos flexBox</h2>
+<div class="contenedor">
+
+    <div class="caja">Caja 1</div>
+    <div class="caja">Caja 2</div>
+    <div class="caja">Caja 3</div>
+    <div class="caja">Caja 4</div>
+
+</div>
+    
+</body>
+</html>
