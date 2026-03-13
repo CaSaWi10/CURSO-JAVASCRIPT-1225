@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href ="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel ="stylesheet"> 
+    <link rel ="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <!--Google fonts nos da letras que no estan en html por default-->
+
+</head>
+<body>
+
+
+<nav id="navbar" class="nav">
+
+    <ul class="nav-list">
+        <!--para hacer dif listados con links es (li>a)*3-->
+        <li><a href="#welcome-section">Acerca</a></li>
+        <li><a href="#projects">Projectos</a></li>
+        <li><a href="Contact">Contatos</a></li>
+    </ul>
+</nav>
+
+<!--para crear secciones con id y clase se escribe asi section#welcome.section-welcome-section -->
+<section id="welcome-section" class="welcome-section">
+    <h1>Hola soy Will Catalan</h1>
+    <p>Desarrollador Web</p>
+</section>
+
+<!--para crear secciones con id y clase se escribe asi section#projects.projects-section-->
+<section id="projects" class="projects-section">
+<h2 class="project-section-header">
+    Algunos de mis projectos
+</h2>
+
+<div class="projects-grid">
+
+<!--Esto es un tarjeta q se creo para el projecto -->
+    <a href="#" target="_blank" class="project">
+        <img 
+        class="project-image"
+        src="./imagenes/calculator-5149748_1920.png"
+        atl="Proyecto Calculadora">
+        <p class="project-title">
+            <span>&lt;</span>
+            Calculadora de funciones
+            <span>&#47;&gt;</span>
+        </p>
+    </a>
+
+<!--Tarjeta 2 para el projecto -->
+<a href="#" target="_blank" class="project">
+        <img 
+        class="project-image"
+        src="./imagenes/Banco.jpg" 
+        atl="Pagina de un Banco">
+        <p class="project-title">
+            <span>&lt;</span>
+            Pagina de un Banco Json
+            <span>&#47;&gt;</span>
+        </p>
+    </a>
+
+<!--Tarjeta 3 para el projecto -->
+    <a href="#" target="_blank" class="project">
+        <img 
+        class="project-image"
+        src="./imagenes/Server.jpg" 
+        atl="Conexion con servidor">
+        <p class="project-title">
+            <span>&lt;</span>
+            Conexion con un servidor
+            <span>&#47;&gt;</span>
+        </p>
+    </a>
+
+<!--Tarjeta 4 para el projecto -->
+    <a href="#" target="_blank" class="project">
+        <img 
+        class="project-image"
+        src="./imagenes/Adivina.jpg" 
+        atl="Adivina el Numero">
+        <p class="project-title">
+            <span>&lt;</span>
+            Juego de adivina el numero con REACT
+             <span>&#47;&gt;</span>
+        </p>
+    </a>
+
+<!--Tarjeta 5 para el projecto -->
+
+<a href="#" target="_blank" class="project">
+        <img 
+        class="project-image"
+        src="./imagenes/netflix.jpge.webp" 
+        atl="Clon de Netflix">
+        <p class="project-title">
+            <span>&lt;</span>
+            Clon de Netflix
+             <span>&#47;&gt;</span>
+        </p>
+    </a>
+
+</div>
+
+<a href="#" class="btn-show-all" target="_blank">Ver todos <i class="fa-solid fa-arrow-right"></i></a>
+
+<!--Seccion contactos -->
+
+</section> 
+<section id="contact" class="contact-section">
+    <div class="contact-section-header">
+        <h2>Trabajemos juntos...</h2>
+        <p>como tomas tu cafe ?</p>
+    </div>
+
+
+    <div class="contact-links">
+
+
+        <a href="#" target="_blank"
+          class="contact-details">
+          <i class="fa-brands fa-facebook-f"></i>
+          Facebook
+        </a>
+        
+        <a href="#" target="_blank"
+          class="contact-details">
+           <i class="fa-brands fa-github-alt"></i>
+          Git hub
+        </a>
+
+        <a href="#" target="_blank"
+         class="contact-details">
+          <i class="fa-brands fa-twitter"></i>
+         Twitter
+        </a>
+
+        <a href="#" target="_blank"
+         class="contact-details">
+         <i class="fa-solid fa-envelope"></i>
+          Enviar Correo
+        </a>
+
+        <a href="#" target="_blank"
+         class="contact-details">
+         <i class="fa-notdog fa-solid fa-phone"></i>
+         Call us  
+        </a>
+    </div>
+</section>
+
+<!--Footer -->
+
+<footer class="footer">
+
+    <p>&copy; Todos los derechos reservados <a href="#">Will Catalan</a> </p>
+
+</footer>
+
+</body>
+</html>
